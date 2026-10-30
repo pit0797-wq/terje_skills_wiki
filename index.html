@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TerjeSkills — вики для игроков СтанZ</title>
+<style>
+  *{box-sizing:border-box}
+  body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(160deg,#14161a 0%,#1a1d21 60%,#1d1a14 100%);color:#e8e6e3;margin:0;padding:0 16px 40px}
+  a{color:#ffb347}
+  .wrap{max-width:1020px;margin:0 auto}
+  header{display:flex;align-items:center;gap:14px;padding:22px 0 6px;flex-wrap:wrap}
+  .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#ff9f2e,#c96a10);display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 0 18px rgba(255,159,46,.35)}
+  h1{font-size:24px;margin:0}
+  .sub{font-size:13px;color:#9aa0a6}
+  .badge{background:#3a2b12;border:1px solid #ff9f2e;color:#ffb347;border-radius:20px;padding:3px 12px;font-size:12px;font-weight:bold}
+  .card{background:#24272c;border:1px solid #33373d;border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+  .tab{padding:8px 16px;border-radius:20px;border:1px solid #444;background:#2e3238;color:#eee;cursor:pointer;font-size:14px;transition:.15s}
+  .tab:hover{background:#3c4149}
+  .tab.on{background:#c96a10;border-color:#ff9f2e;color:#fff;font-weight:bold}
+  .sec{display:none}.sec.on{display:block}
+  h2{font-size:19px;margin:4px 0 10px;color:#ffb347}
+  h3{font-size:16px;margin:14px 0 6px;color:#8fc3ff}
+  p{line-height:1.55;font-size:14px;margin:8px 0}
+  .hint{font-size:12px;color:#8b9299}
+  .warn{color:#ffb347;font-size:13px;background:#2b2417;border:1px solid #4a3b1e;border-radius:8px;padding:8px 12px}
+  .ok{color:#7ddc8f;font-size:13px}
+  ul,ol{line-height:1.6;font-size:14px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+  th,td{padding:6px 9px;border-bottom:1px solid #333;text-align:left;vertical-align:top}
+  th{color:#8fc3ff;font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+  .big{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .sk{background:#2a2e34;border:1px solid #3a3f47;border-radius:12px;padding:14px;cursor:pointer;transition:.15s}
+  .sk:hover{border-color:#ff9f2e;transform:translateY(-2px)}
+  .sk h4{margin:0 0 6px;font-size:16px}
+  .sk .mod{font-size:12px;color:#7ddc8f;background:#1e2b21;border:1px solid #2b5d3c;border-radius:8px;padding:6px 9px;margin:8px 0}
+  .sk .train{font-size:12px;color:#9aa0a6;margin-top:6px}
+  .sk .req{display:inline-block;font-size:11px;color:#ff8f8f;background:#2b1a1a;border:1px solid #5d2b2b;border-radius:6px;padding:2px 8px;margin-left:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .chip{font-size:12px;background:#33383f;border:1px solid #454b54;border-radius:14px;padding:3px 10px}
+  .chip.on{background:#c96a10;border-color:#ff9f2e;color:#fff}
+  .perkbox{display:none;margin-top:10px;border-top:1px dashed #444;padding-top:8px}
+  .perkbox.on{display:block}
+  input[type=text],input[type=search],select{font-size:14px;border-radius:8px;border:1px solid #444;background:#2e3238;color:#eee;padding:8px 12px;width:100%}
+  .plan{border-left:3px solid #ff9f2e;padding-left:14px;margin:14px 0}
+  .plan b{color:#ffb347}
+  .faq q{display:block;font-weight:bold;color:#8fc3ff;margin-top:12px}
+  .faq a2{display:block;margin-top:2px}
+  .stat{display:inline-block;background:#2e3238;border:1px solid #444;border-radius:10px;padding:8px 14px;margin:4px 8px 4px 0;font-size:13px}
+  .stat b{color:#ffb347;font-size:17px}
+  footer{margin-top:30px;padding:18px;text-align:center;border-top:1px solid #33373d}
+  .aut{font-weight:bold;color:#ffb347;font-size:15px}
+  .sup{color:#9aa0a6;font-size:13px}
+  .copy{cursor:pointer;border-bottom:1px dashed #ffb347}
+  .copy:hover{color:#ffb347}
+  .num{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;border-radius:50%;background:#c96a10;color:#fff;font-weight:bold;font-size:13px;margin-right:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo">📈</div>
+  <div style="flex:1">
+    <h1>TerjeSkills — вики по навыкам <span class="badge">v2.0</span></h1>
+    <div class="sub">Учебник для игроков сервера <b>СтанZ</b> · мод TerjeSkills</div>
+  </div>
+</header>
+
+<div class="tabs">
+  <button class="tab on" data-s="start">🚀 Начало</button>
+  <button class="tab" data-s="level">📈 Как качается</button>
+  <button class="tab" data-s="skills">🎯 Навыки</button>
+  <button class="tab" data-s="plans">🧭 Планы развития</button>
+  <button class="tab" data-s="settings">⚙️ Настройки сервера</button>
+  <button class="tab" data-s="faq">❓ FAQ</button>
+</div>
+
+<!-- ============ НАЧАЛО ============ -->
+<div class="sec on" id="start">
+  <div class="card">
+    <h2>Что такое TerjeSkills</h2>
+    <p>TerjeSkills — это мод, который добавляет в DayZ <b>систему навыков и перков</b>: ваш персонаж развивается в девяти направлениях, становясь выносливее, живучее и эффективнее. Всё качается автоматически — просто играйте, а мод отмечает ваши действия опытом.</p>
+    <div>
+      <span class="stat"><b>9</b> навыков</span>
+      <span class="stat"><b>107</b> перков</span>
+      <span class="stat">прогресс <b>не сбрасывается</b> при смерти персонажа</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Главное для новичка — запомните 5 фактов</h2>
+    <ol>
+      <li><b>Навыки качаются действиями.</b> Бег — атлетика, готовка еды — метаболизм, лечение ран — медицина. Никаких кнопок «прокачать» нет.</li>
+      <li><b>Перки открываются сами.</b> Достигли нужного уровня навыка — перк стал доступен, осталось вложить в него очко.</li>
+      <li><b>Прогресс сохраняется при смерти.</b> Навыки не сгорают, но часть опыта может теряться — это настраивает админ сервера.</li>
+      <li><b>Два навыка требуют мод на медицину.</b> «Иммунитет» и «Медицина» работают только при установленном TerjeMedicine (на СтанZ он есть).</li>
+      <li><b>Качайте то, чем играете.</b> Снайпер, медик и сталкер прокачивают совершенно разные вещи — выберите свой путь в разделе «Планы развития».</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ============ КАК КАЧАЕТСЯ ============ -->
+<div class="sec" id="level">
+  <div class="card">
+    <h2>Опыт и уровни</h2>
+    <p>За игровые действия персонаж получает <b>опыт</b> в конкретный навык. Набрали достаточно — уровень навыка вырос, и вы получили <b>очки перков</b>. Очки тратятся на перки своего навыка.</p>
+    <table>
+      <tr><th>Понятие</th><th>Что это</th></tr>
+      <tr><td><b>Навык</b></td><td>Большое направление: Атлетика, Медицина, Охота… Чем выше уровень — тем сильнее постоянный бонус навыка.</td></tr>
+      <tr><td><b>Перк</b></td><td>Конкретное умение внутри навыка. Активируется за очки, доступен с определённого уровня навыка.</td></tr>
+      <tr><td><b>Опыт</b></td><td>Начисляется за действия: бег, лечение, костры, охота, рыбалка.</td></tr>
+    </table>
+    <div class="warn">⚠ Точное число уровней, очков за уровень и порогов перков на сервере СтанZ настроено админом и может отличаться от стандартных значений мода.</div>
+  </div>
+  <div class="card">
+    <h2>Как быстро качать — по шагам</h2>
+    <ol>
+      <li><span class="num">1</span><b>Первые минуты:</b> включите HUD навыков в настройках игры, чтобы видеть прогресс.</li>
+      <li><span class="num">2</span><b>Бег — фундамент:</b> двигайтесь по маршруту пешком/бегом, а не прыжками. Атлетика качается километрами.</li>
+      <li><span class="num">3</span><b>Ешьте и пейте регулярно:</b> каждый приём пищи и глоток воды тренирует Метаболизм — это самый «бесплатный» навык.</li>
+      <li><span class="num">4</span><b>Лечитесь сами и лечите друзей:</b> бинты, шприцы, таблетки — опыт в Медицину. Друг получил рану? Отличный шанс.</li>
+      <li><span class="num">5</span><b>Костёр — двойная польза:</b> греетесь и качаете Выживание. Каждое разведение костра считается.</li>
+      <li><span class="num">6</span><b>Охотьтесь и рыбачьте:</b> животное убито и разделано — опыт в Охоту; поймал рыбу — опыт в Рыбалку.</li>
+      <li><span class="num">7</span><b>Ходите на корточках в зоне риска:</b> скрытное передвижение без встречи с заражёнными тренирует Скрытность.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ============ НАВЫКИ ============ -->
+<div class="sec" id="skills">
+  <div class="card">
+    <h2>Навыки и перки</h2>
+    <p>Нажмите на карточку, чтобы раскрыть полный список перков. Процентные бонусы навыка указаны по официальной вики мода — <b>за каждый уровень</b>.</p>
+    <input type="search" id="search" placeholder="🔍 Поиск по навыкам и перкам: например «костёр» или «выносливость»">
+    <p class="hint" id="foundMsg"></p>
+  </div>
+  <div class="big" id="skillCards"></div>
+</div>
+
+<!-- ============ ПЛАНЫ ============ -->
+<div class="sec" id="plans">
+  <div class="card">
+    <h2>Выберите свой путь</h2>
+    <p>Очки перков ограничены — вкладывайте их в то, что реально пригодится вашему стилю игры.</p>
+
+    <div class="plan">
+      <h3>🪖 Воин — штурмовик и ПВП</h3>
+      <p><b>Приоритет:</b> Атлетика → Сила → Метаболизм → Иммунитет</p>
+      <p>Выносливость решает, кто уйдёт от перестрелки, а вес — сколько боеприпасов унесёте. Перки «Марафонец», «Тяжеловес», «Крепкие кости» — ваша база. Иммунитет добьёте со временем, он и так качается лечением.</p>
+    </div>
+    <div class="plan">
+      <h3>🏕️ Выживальщик — долгая жизнь в глуши</h3>
+      <p><b>Приоритет:</b> Выживание → Охота → Рыбалка → Скрытность</p>
+      <p>Костры быстрее, холод страшнее не для вас, зомби бьют слабее, а с «Чуйкой грибника» и «Следопытом» вы самодостаточны. Скрытность помогает уходить от любых проблем, а не решать их боем.</p>
+    </div>
+    <div class="plan">
+      <h3>🩺 Медик — полевой врач отряда</h3>
+      <p><b>Приоритет:</b> Медицина → Иммунитет → Метаболизм</p>
+      <p>«Хирург», «Мастер перевязки», «Сердечно-лёгочная реанимация» и «Анестезиолог» превращают вас в ходячую больницу. Иммунитет подстрахует, когда лекарства кончились. Отряд будет вас оберегать — вы слишком ценны.</p>
+    </div>
+    <div class="plan">
+      <h3>🌫️ Сталкер — разведка и ночная охота</h3>
+      <p><b>Приоритет:</b> Скрытность → Атлетика → Выживание</p>
+      <p>«Невидимка», «Кошачье зрение», «Волчий инстинкт» — вы видите раньше и остаётесь незаметным дольше. Атлетика даст запас на отход, Выживание — на автономность в рейдах.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ НАСТРОЙКИ ============ -->
+<div class="sec" id="settings">
+  <div class="card">
+    <h2>Что настроено на сервере</h2>
+    <p>Мод даёт админу полный контроль, поэтому на СтанZ баланс может отличаться от вики. Вот что админ может менять:</p>
+    <ul>
+      <li>включать и отключать отдельные <b>навыки и перки</b>;</li>
+      <li>задавать, сколько <b>очков начисляется за уровень</b>;</li>
+      <li>настраивать, <b>сколько опыта теряется при смерти</b> персонажа;</li>
+      <li>менять <b>количество уровней</b> навыков и перков (до 10 уровней у перка);</li>
+      <li>регулировать <b>силу влияния</b> каждого перка и уровень, с которого он доступен.</li>
+    </ul>
+    <p class="hint">Дополнительные тонкие настройки живут в файле Skills.cfg на сервере (папка profiles\TerjeSettings). Игрокам туда ходить не нужно — всё уже настроено.</p>
+    <div class="warn">⚠ Если какой-то перк ведёт себя «не как в вики» — это не баг, а настройка сервера. Вопросы по балансу задавайте админам СтанZ.</div>
+  </div>
+</div>
+
+<!-- ============ FAQ ============ -->
+<div class="sec" id="faq">
+  <div class="card faq">
+    <h2>Частые вопросы</h2>
+    <q>Сгорают ли навыки при смерти?</q>
+    <p>Нет, навыки и перки не сбрасываются — персонаж умирает, а прогресс остаётся. Но часть накопленного опыта может теряться: сколько именно — решает админ сервера.</p>
+    <q>Где посмотреть свои навыки в игре?</q>
+    <p>Откройте меню персонажа (клавиша Tab) — там вкладка навыков с уровнем, полоской опыта и доступными перками. Если вкладки нет — мод не подхватился, сообщите админу.</p>
+    <q>Какой навык качать первым?</q>
+    <p>Метаболизм и Атлетика — они качаются почти пассивно (еда, вода, бег) и дают самые ощутимые бонусы: экономия калорий и больше выносливости.</p>
+    <q>Перк недоступен, хотя уровень вроде есть</q>
+    <p>Перки открываются с конкретного уровня навыка, а на покупку нужны очки. Проверьте, сколько очков у вас свободно, и с какого уровня открывается перк.</p>
+    <q>Навыки «Иммунитет» и «Медицина» не растут</q>
+    <p>Оба навыка требуют мод TerjeMedicine. Иммунитет растёт после успешного лечения болезней, Медицина — за оказание медпомощи. Если на сервере нет мода медицины, эти навыки просто не активны.</p>
+    <q>Как качать Скрытность, если вокруг нет заражённых?</q>
+    <p>Просто передвигайтесь скрытно и не попадайтесь заражённым на глаза — мод засчитывает именно такое поведение, а не только стелс-побеги.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="aut">Автор: pit0797</div>
+  <div class="sup">При поддержке сервера СтанZ ★</div>
+</footer>
+</div>
+
+<script>
+"use strict";
+const SKILLS=[
+ {icon:"🛡️",name:"Иммунитет",req:"TerjeMedicine",
+  mods:["−1% шанс заболеть и +1% скорость выздоровления за уровень"],
+  train:"Вырабатывается со временем после успешного лечения болезней, вирусов и инфекций. Просто болейте и лечитесь — навык растёт сам.",
+  desc:"Отвечает за распознавание и борьбу организма с болезнями, вирусами и инфекциями. Долгоживущий персонаж с высоким иммунитетом болеет заметно реже.",
+  perks:["Устойчивость к простуде","Сопротивление отравлению","Восстановление гематом","Заживление ран","Сопротивление интоксикации","Быстрый сон","Железный рассудок","Восстановление после шока","Боец","Железная кожа","Сопротивление зомби вирусу","Сопротивление сепсису","Ноги в тепле","Терморегуляция","Безопасный обед","Быстрое исцеление","Регенерация крови","Густая кровь","Сопротивление бешенству","Низкий болевой порог","Радиационная устойчивость","Радиационная регенерация"]},
+ {icon:"🍎",name:"Метаболизм",req:"",
+  mods:["Расход калорий и воды снижается на 1% за уровень"],
+  train:"Употребление еды и воды. Каждая банка тушёнки и каждый глоток воды тренируют навык — качается сам собой.",
+  desc:"Организм эффективнее усваивает пищу, а в её отсутствие дольше выживает без вреда для здоровья. Для дальних рейдов — маст-хэв.",
+  perks:["Повышенная калорийность","Повышенная гидрация","Экономия энергии","Экономия воды","Контроль энергии","Контроль гидрации","Сдерживание энергии","Сдерживание воды","Стойкость к воде","Стойкость к голоду","Хищное пищеварение"]},
+ {icon:"💉",name:"Медицина",req:"TerjeMedicine",
+  mods:[],modsHint:"Прямого процента нет: перки делают лечение эффективнее — от скорости перевязки до качества препаратов.",
+  train:"Оказание медицинской помощи себе или другим выжившим: бинты, шприцы, ампулы, таблетки, хирургия.",
+  desc:"Позволяет эффективнее лечить заболевания любой тяжести. Перки открывают хирургию и улучшают действие препаратов.",
+  perks:["Хирургия колотых ран","Хирургия пулевых ран","Хирургия внутренних органов","Чистота и стерильность","Улучшенные препараты","Мастер перевязки","Хирург","Сердечно-лёгочная реанимация","Распознавание таблеток","Распознавание ампул","Распознавание инъекторов","Эксперт по антибиотикам","Анестезиолог"]},
+ {icon:"🏃",name:"Атлетика",req:"",
+  mods:["+2% максимальная выносливость за уровень"],
+  train:"Бег на длинные дистанции. Планируйте маршруты по земле — километры набегут быстрее, чем вы заметите.",
+  desc:"Влияет на выносливость, её расход и восстановление при движении. Основа любого стиля игры.",
+  perks:["Быстрые ноги","Марафонец","Правильное дыхание","Пловец","Мастер лестниц","Без одышки","Выносливый","Каскадёр","Крепкие кости"]},
+ {icon:"💪",name:"Сила",req:"",
+  mods:["+2% максимально переносимый вес за уровень"],
+  train:"Регулярные физические нагрузки и использование оружия ближнего боя: топоры, лопаты, кувалды.",
+  desc:"Позволяет переносить больший вес и наносить более мощные удары в ближнем бою. Лутер и дубинщик оценят.",
+  perks:["Тяжеловес","Попрыгун","Мастер защиты","Мастер уклонения","Порывистый шквал","Сокрушающий шквал","Тяжёлый натиск","Разрушающий натиск","Облегчённая броня","Сильные руки","Удар мастера"]},
+ {icon:"🕶️",name:"Скрытность",req:"",
+  mods:[],modsHint:"Прямого процента нет: перки снижают заметность и шум, улучшают ночное зрение и стелс-поведение.",
+  train:"Скрытное передвижение. Идите пригнувшись в местах с заражёнными и не попадайтесь им на глаза.",
+  desc:"Делает вас более незаметным для заражённых и других выживших. Ценность растёт на серверах с активным ПВП.",
+  perks:["Тихие шаги","Хладнокровный","Коммандос","Подгонка снаряжения","Невидимка","Кошачье зрение","Волчий инстинкт","Друг косолапых","Бесшумный убийца","Ниндзя","Бесшумный шаг"]},
+ {icon:"🌲",name:"Выживание",req:"",
+  mods:["−1% восприимчивость к температуре за уровень","−1% урон от зомби за уровень","−2% время разведения костра за уровень"],
+  train:"Убивайте заражённых и разводите костры. Персонажи с большой продолжительностью жизни получают дополнительный бонусный опыт.",
+  desc:"Открывает умения, которые помогают выжить в суровом мире: огонь, холод, хлипкая экипировка и зомби перестают быть проблемой.",
+  perks:["Разведение огня","Сопротивление холоду","Грубые ноги","Грубые руки","Технологии предков","Поддержание огня","Прочная экипировка","Знаток","Невидимые схроны","Инстинкт выживания","Чуйка грибника"]},
+ {icon:"🦌",name:"Охота",req:"",
+  mods:["+2% кусков мяса при разделке за уровень"],
+  train:"Охота на диких животных и разделка их туш. Чем больше туши — тем быстрее навык.",
+  desc:"Эффективная охота, разделка туш, создание и установка ловушек. Сытый выживальщик — это живой выживальщик.",
+  perks:["Охотник за мясом","Быстрая разделка","Мастер ножа","Эксперт по ловушкам","Выделка шкур","Опытный охотник","Знание анатомии","Удаление гнили","Следопыт"]},
+ {icon:"🎣",name:"Рыбалка",req:"",
+  mods:[],modsHint:"Прямого процента нет: перки улучшают улов, снасти и переработку рыбы.",
+  train:"Ловля рыбы. Удочка, сети, ловушки — всё в дело.",
+  desc:"Позволяет эффективнее ловить рыбу, создавать и использовать снасти и ловушки. Стабильный источник еды без риска.",
+  perks:["Суши мастер","Быстрая очистка","Умелые руки","Ловля сетями","Ловкий рыбак","Удачливый рыбак","Надёжные снасти","Охотник на червей","Вырезание гнили","Мастер самоделок"]}
+];
+
+const $=id=>document.getElementById(id);
+let totalPerks=0;SKILLS.forEach(s=>totalPerks+=s.perks.length);
+
+function renderSkills(filter){
+  const box=$("skillCards");box.innerHTML="";
+  let found=0;
+  SKILLS.forEach((s,idx)=>{
+    const text=(s.name+" "+s.desc+" "+s.train+" "+s.perks.join(" ")).toLowerCase();
+    if(filter&&!text.includes(filter))return;
+    found++;
+    const el=document.createElement("div");el.className="sk";
+    const mods=s.mods.map(m=>`<div class="mod">📈 ${m}</div>`).join("")+(s.modsHint?`<div class="mod" style="color:#9fd0ff;background:#1c2733;border-color:#2a4a6b">ℹ ${s.modsHint}</div>`:"");
+    const req=s.req?`<span class="req">требует ${s.req}</span>`:"";
+    const chips=s.perks.map(p=>`<span class="chip">${p}</span>`).join("");
+    el.innerHTML=`<h4>${s.icon} ${s.name}${req} <span class="hint" style="float:right">${s.perks.length} перков</span></h4>
+      <p class="hint" style="margin:2px 0">${s.desc}</p>${mods}
+      <div class="train">💪 <b>Как качать:</b> ${s.train}</div>
+      <button class="tab" style="margin-top:8px;padding:5px 12px;font-size:12px">Перки ▾</button>
+      <div class="perkbox"><div class="chips">${chips}</div></div>`;
+    const btn=el.querySelector("button"),pb=el.querySelector(".perkbox");
+    btn.onclick=e=>{e.stopPropagation();pb.classList.toggle("on");btn.textContent=pb.classList.contains("on")?"Перки ▴":"Перки ▾";};
+    el.onclick=()=>{pb.classList.toggle("on");btn.textContent=pb.classList.contains("on")?"Перки ▴":"Перки ▾";};
+    box.appendChild(el);
+  });
+  $("foundMsg").textContent=filter?`Найдено навыков: ${found}`:`Всего перков в моде: ${totalPerks}`;
+}
+$("search").oninput=e=>renderSkills(e.target.value.trim().toLowerCase());
+renderSkills("");
+
+document.querySelectorAll(".tab[data-s]").forEach(t=>t.onclick=()=>{
+  document.querySelectorAll(".tab[data-s]").forEach(x=>x.classList.remove("on"));
+  document.querySelectorAll(".sec").forEach(x=>x.classList.remove("on"));
+  t.classList.add("on");$(t.dataset.s).classList.add("on");
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+</script>
+</body>
+</html>
